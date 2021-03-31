@@ -7,8 +7,7 @@ tasks:
     command:
       export PATH=./tools/zig:$PATH
       && echo building ...
-      && zig build
-      && zig build test
+      && zig build |& tee build.log
 
 vscode:
   extensions:

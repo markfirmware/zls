@@ -2,3 +2,6 @@
 /zig-cache
 debug
 release
+
+# gitpod build log
+build.log
