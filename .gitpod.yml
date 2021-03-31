@@ -1,0 +1,5 @@
+tasks:
+  - name: build and test
+    init:
+      pushd known-folders && git submodule init && git submodule update && popd
+      && pushd zinput && git submodule init && git submodule update && popd
