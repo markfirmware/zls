@@ -3,3 +3,4 @@ tasks:
     init:
       pushd src/known-folders && git submodule init && git submodule update && popd
       && pushd src/zinput && git submodule init && git submodule update && popd
+      && ./tools/update-tools.sh
