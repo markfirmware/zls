@@ -4,3 +4,13 @@ tasks:
       pushd src/known-folders && git submodule init && git submodule update && popd
       && pushd src/zinput && git submodule init && git submodule update && popd
       && ./tools/update-tools.sh
+    command:
+      export PATH=./tools/zig:$PATH
+      && echo building ...
+      && zig build
+      && zig build test
+
+vscode:
+  extensions:
+    - tiehuis.zig@0.2.5:Yj8BTORJw/zERdoSGPf+eQ==
+    - augusterame.zls-vscode@1.0.4:ZQxqRwcEt9rZuan0J+3BRQ==
