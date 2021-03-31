@@ -8,7 +8,7 @@ tasks:
       export PATH=./tools/zig:$PATH
       && echo building zls
       && zig build |& tee build.log
-      && touch zig-cache/bin/zls.json
+      && echo "{}" > zls.json
 
 vscode:
   extensions:
