@@ -6,10 +6,10 @@ tasks:
       && ./tools/update-tools.sh
     command:
       export PATH=./tools/zig:$PATH
+      && echo "[\"zig_exe_path\",\"$(pwd)/tools/zig/zig\"]" | jq "{(.[0]):.[1]}" > ~/.config/zls.json
       && echo
       && echo building zls
       && zig build |& tee build.log
-      && echo "{}" > ~/.config/zls.json
 vscode:
   extensions:
     - tiehuis.zig@0.2.5:Yj8BTORJw/zERdoSGPf+eQ==
