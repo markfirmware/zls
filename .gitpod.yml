@@ -5,7 +5,7 @@ tasks:
       && pushd src/zinput && git submodule init && git submodule update && popd
       && ./tools/update-tools.sh
     command:
-      export PATH=./tools/zig:$PATH
+      gp env PATH=./tools/zig:$PATH
       && echo
       && echo building zls
       && zig build |& tee build.log
