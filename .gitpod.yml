@@ -6,7 +6,7 @@ tasks:
       && ./tools/update-tools.sh
     command:
       export PATH=./tools/zig:$PATH
-      && echo "[\"zig_exe_path\",\"$(pwd)/tools/zig/zig\"]" | jq "{(.[0]):.[1]}" > ~/.config/zls.json
+      && echo "{\"zig_exe_path\":\"$(pwd)/tools/zig/zig\"}" > ~/.config/zls.json
       && echo
       && echo building zls
       && zig build |& tee build.log
