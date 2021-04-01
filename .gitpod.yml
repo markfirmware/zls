@@ -9,8 +9,7 @@ tasks:
       && echo
       && echo building zls
       && zig build |& tee build.log
-      && echo "{}" > zig-cache/bin/zls.json
-
+      && echo "{}" > ~/.config/zls.json
 vscode:
   extensions:
     - tiehuis.zig@0.2.5:Yj8BTORJw/zERdoSGPf+eQ==
