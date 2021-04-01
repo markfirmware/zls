@@ -4,9 +4,9 @@ tasks:
       pushd src/known-folders && git submodule init && git submodule update && popd
       && pushd src/zinput && git submodule init && git submodule update && popd
       && ./tools/update-tools.sh
-      && gp env PATH=./tools/zig:$PATH
     command:
-      echo
+      PATH=./tools/zig:$PATH
+      && echo
       && echo building zls
       && zig build |& tee build.log
       && echo "{}" > ~/.config/zls.json
