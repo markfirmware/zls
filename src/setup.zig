@@ -217,6 +217,8 @@ pub fn findZig(allocator: *std.mem.Allocator) !?[]const u8 {
     };
     defer allocator.free(env_path);
 
+    std.debug.print("PATH: {s}\n", .{env_path});
+
     const exe_extension = std.Target.current.exeFileExt();
     const zig_exe = try std.fmt.allocPrint(allocator, "zig{s}", .{exe_extension});
     defer allocator.free(zig_exe);
